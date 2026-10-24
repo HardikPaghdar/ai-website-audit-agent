@@ -1,10 +1,5 @@
 # AI Website Audit Agent
 
-Rule-based audit for public HTML pages. Checks title/description, canonical, H1 structure, image alt attributes, generic link labels and noindex signals. Outputs actionable findings in JSON and Markdown.
+Rule-based audit of public HTML for titles, descriptions, canonical links, H1 structure, missing image alt text and generic link labels. Outputs findings with fixes; not a Lighthouse, WCAG certification, or AI-search ranking tool.
 
-## Run
-`pip install -r requirements.txt`
-`python -m website_audit.cli https://example.com --out reports/audit.md`
-`pytest`
-
-This is not a Lighthouse/Core Web Vitals report, WCAG certification, JavaScript crawler or AI-search ranking guarantee. Only audit sites you are authorized to test. Basic URL guards are not a complete SSRF defense; see docs.
+Run: `pip install -r requirements.txt`; `python -m website_audit.cli https://example.com`; `pytest`. Only audit sites you are authorized to test. URL guards are demo-level, not complete SSRF protection.
